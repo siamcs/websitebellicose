@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hermano Synergy | Engineering & Logistics Excellence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+        
+        :root {
+            --primary: #1e40af;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)), url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
+        }
+        
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #3b82f6;
+            transform: translateY(-2px);
+        }
+        
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        
+        .section-header {
+            position: relative;
+        }
+        
+        .section-header:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: #3b82f6;
+            bottom: -8px;
+            left: 0;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- NAVBAR -->
+    <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-blue-700 rounded-xl flex items-center justify-center text-white font-bold text-2xl">HS</div>
+                    <div>
+                        <span class="text-2xl font-bold tracking-tight text-gray-900">Hermano</span>
+                        <span class="text-2xl font-bold tracking-tight text-blue-600">Synergy</span>
+                    </div>
+                </div>
+
+                <!-- Menu -->
+                <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-blue-600">About</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-blue-600">Capabilities</a>
+                    <a href="#projects" class="nav-link text-gray-700 hover:text-blue-600">Projects</a>
+                    <a href="#clients" class="nav-link text-gray-700 hover:text-blue-600">Clients</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600">Contact</a>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <a href="#contact" 
+                       class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl transition-colors">
+                        Get a Quote
+                    </a>
+                    <button class="md:hidden text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero-bg text-white min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-6 py-24">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-5 py-2 rounded-full text-sm mb-6">
+                    <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    Dhaka, Bangladesh
+                </div>
+                
+                <h1 class="text-6xl md:text-7xl font-bold leading-tight mb-6">
+                    Building Tomorrow,<br>Delivering Excellence
+                </h1>
+                
+                <p class="text-xl text-gray-200 mb-10 max-w-lg">
+                    Hermano Synergy delivers integrated solutions in civil infrastructure, institutional construction, 
+                    nutritional supply, and defense logistics across Bangladesh.
+                </p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contact" 
+                       class="px-8 py-4 bg-white text-blue-700 font-semibold rounded-2xl hover:bg-gray-100 transition-all inline-flex items-center gap-3">
+                        Start a Project
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#services" 
+                       class="px-8 py-4 border border-white/70 hover:bg-white/10 font-semibold rounded-2xl transition-all">
+                        Our Capabilities
+                    </a>
+                </div>
+                
+                <div class="mt-16 grid grid-cols-3 gap-8 text-sm">
+                    <div>
+                        <div class="text-4xl font-bold text-white">50+</div>
+                        <div class="text-gray-300">Projects Completed</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-white">15+</div>
+                        <div class="text-gray-300">Years Experience</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-white">200+</div>
+                        <div class="text-gray-300">Happy Clients</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 animate-bounce">
+            <i class="fa-solid fa-chevron-down text-4xl"></i>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-blue-600 font-semibold tracking-widest">WHO WE ARE</span>
+                    <h2 class="text-5xl font-bold mt-3 mb-8 leading-tight">Excellence in Engineering &amp; Supply Chain</h2>
+                    
+                    <p class="text-lg text-gray-600 mb-6">
+                        Hermano Synergy is a dynamic Bangladeshi enterprise specializing in multi-sector infrastructure development, 
+                        institutional construction, and reliable supply chain solutions.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-5">
+                            <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">🏗️</div>
+                            <div>
+                                <h4 class="font-semibold text-xl">Infrastructure Mastery</h4>
+                                <p class="text-gray-600">From highways to institutional buildings, we deliver quality construction with international standards.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-5">
+                            <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">📦</div>
+                            <div>
+                                <h4 class="font-semibold text-xl">Reliable Logistics</h4>
+                                <p class="text-gray-600">Nutritional and defense supply solutions that meet the highest hygiene and certification standards.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12 pt-8 border-t">
+                        <div class="flex items-center gap-8">
+                            <div>
+                                <p class="text-sm text-gray-500">Head Office</p>
+                                <p class="font-medium">Rampura, Banasree, Dhaka, Bangladesh</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Contact</p>
+                                <a href="mailto:info@hermanosynergy.com" class="font-medium text-blue-600 hover:underline">info@hermanosynergy.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <img src="https://picsum.photos/id/1016/800/900" 
+                         alt="Hermano Synergy Construction Site"
+                         class="rounded-3xl shadow-2xl">
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-3xl shadow-xl max-w-[220px]">
+                        <div class="flex items-center gap-4">
+                            <div class="text-5xl">🇧🇩</div>
+                            <div>
+                                <p class="font-semibold">Proudly Bangladeshi</p>
+                                <p class="text-sm text-gray-500">Serving nation-building projects since 2010</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAPABILITIES / SERVICES -->
+    <section id="services" class="py-24 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-semibold">OUR EXPERTISE</span>
+                <h2 class="text-5xl font-bold mt-3">Project Capabilities</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="service-card bg-white rounded-3xl overflow-hidden shadow">
+                    <div class="h-56 bg-gradient-to-br from-blue-700 to-blue-900 p-8 flex items-end">
+                        <div class="text-white">
+                            <i class="fa-solid fa-road text-5xl mb-4"></i>
+                            <h3 class="text-2xl font-bold">Civil Infrastructure</h3>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Highways, city roads, urban paving, structural concrete casting and more.
+                        </p>
+                        <div class="mt-6 text-xs uppercase tracking-widest text-gray-500">Target Clients</div>
+                        <div class="text-sm font-medium">Roads &amp; Highways Dept • Local Government</div>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="service-card bg-white rounded-3xl overflow-hidden shadow">
+                    <div class="h-56 bg-gradient-to-br from-amber-700 to-amber-900 p-8 flex items-end">
+                        <div class="text-white">
+                            <i class="fa-solid fa-school text-5xl mb-4"></i>
+                            <h3 class="text-2xl font-bold">Institutional Building</h3>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Structural construction of multi-story schools, colleges, and campuses.
+                        </p>
+                        <div class="mt-6 text-xs uppercase tracking-widest text-gray-500">Target Clients</div>
+                        <div class="text-sm font-medium">Education Engineering Dept • Public Works</div>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="service-card bg-white rounded-3xl overflow-hidden shadow">
+                    <div class="h-56 bg-gradient-to-br from-emerald-700 to-emerald-900 p-8 flex items-end">
+                        <div class="text-white">
+                            <i class="fa-solid fa-wheat-awn text-5xl mb-4"></i>
+                            <h3 class="text-2xl font-bold">Nutritional Supply</h3>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Sourcing, hygienic packaging, and distributing fortified foods.
+                        </p>
+                        <div class="mt-6 text-xs uppercase tracking-widest text-gray-500">Target Clients</div>
+                        <div class="text-sm font-medium">Primary Education Ministry • NGOs</div>
+                    </div>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="service-card bg-white rounded-3xl overflow-hidden shadow">
+                    <div class="h-56 bg-gradient-to-br from-red-700 to-red-900 p-8 flex items-end">
+                        <div class="text-white">
+                            <i class="fa-solid fa-shield-halved text-5xl mb-4"></i>
+                            <h3 class="text-2xl font-bold">Defense Logistics</h3>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Bulk supply of certified tactical footwear, uniforms, and institutional rations.
+                        </p>
+                        <div class="mt-6 text-xs uppercase tracking-widest text-gray-500">Target Clients</div>
+                        <div class="text-sm font-medium">Ansar • Police • Paramilitary Forces</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <span class="text-blue-600 font-semibold">RECENT WORK</span>
+                    <h2 class="text-5xl font-bold">Featured Projects</h2>
+                </div>
+                <a href="#" class="hidden md:flex items-center gap-2 text-blue-600 font-medium hover:gap-3 transition-all">
+                    View All Projects 
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group">
+                    <div class="overflow-hidden rounded-3xl">
+                        <img src="https://picsum.photos/id/1018/600/400" class="w-full h-64 object-cover transition-transform group-hover:scale-110" alt="Highway Project">
+                    </div>
+                    <div class="mt-5">
+                        <p class="text-blue-600 text-sm font-medium">Civil Infrastructure • 2025</p>
+                        <h3 class="text-2xl font-semibold mt-1">Dhaka-Chittagong Highway Widening</h3>
+                    </div>
+                </div>
+                
+                <div class="group">
+                    <div class="overflow-hidden rounded-3xl">
+                        <img src="https://picsum.photos/id/201/600/400" class="w-full h-64 object-cover transition-transform group-hover:scale-110" alt="School Project">
+                    </div>
+                    <div class="mt-5">
+                        <p class="text-blue-600 text-sm font-medium">Institutional Building • 2024</p>
+                        <h3 class="text-2xl font-semibold mt-1">Banasree Model School Campus</h3>
+                    </div>
+                </div>
+                
+                <div class="group">
+                    <div class="overflow-hidden rounded-3xl">
+                        <img src="https://picsum.photos/id/866/600/400" class="w-full h-64 object-cover transition-transform group-hover:scale-110" alt="Ration Supply">
+                    </div>
+                    <div class="mt-5">
+                        <p class="text-blue-600 text-sm font-medium">Defense Logistics • 2025</p>
+                        <h3 class="text-2xl font-semibold mt-1">Paramilitary Forces Annual Ration Supply</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLIENTS -->
+    <section id="clients" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center text-gray-500 uppercase tracking-widest text-sm mb-12">Trusted by Government &amp; Leading Institutions</div>
+            <div class="grid grid-cols-3 md:grid-cols-6 gap-10 opacity-75">
+                <div class="flex items-center justify-center h-16 text-2xl font-bold">RHD</div>
+                <div class="flex items-center justify-center h-16 text-2xl font-bold">PWD</div>
+                <div class="flex items-center justify-center h-16 text-2xl font-bold">MoE</div>
+                <div class="flex items-center justify-center h-16 text-2xl font-bold">BANGLADESH POLICE</div>
+                <div class="flex items-center justify-center h-16 text-2xl font-bold">ANSAR</div>
+                <div class="flex items-center justify-center h-16 text-2xl font-bold">BGB</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-24 bg-blue-950 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-5xl font-bold leading-tight">Ready to build with us?</h2>
+                    <p class="mt-6 text-xl text-blue-200">
+                        Let's discuss your next infrastructure, construction, or supply project.
+                    </p>
+                    
+                    <div class="mt-12 space-y-8">
+                        <div class="flex items-start gap-6">
+                            <i class="fa-solid fa-location-dot text-3xl mt-1 text-blue-400"></i>
+                            <div>
+                                <p class="font-medium">Head Office</p>
+                                <p class="text-blue-200">Rampura, Banasree, Dhaka, Bangladesh</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-6">
+                            <i class="fa-solid fa-phone text-3xl mt-1 text-blue-400"></i>
+                            <div>
+                                <p class="font-medium">Phone</p>
+                                <p class="text-blue-200">+880 1711-XXXXXX</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-6">
+                            <i class="fa-solid fa-envelope text-3xl mt-1 text-blue-400"></i>
+                            <div>
+                                <p class="font-medium">Email</p>
+                                <a href="mailto:info@hermanosynergy.com" class="text-blue-200 hover:text-white">info@hermanosynergy.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-10 rounded-3xl">
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid grid-cols-2 gap-6">
+                            <input type="text" placeholder="First Name" 
+                                   class="bg-white/10 border border-white/30 rounded-2xl px-6 py-4 focus:outline-none focus:border-blue-400 placeholder:text-gray-400">
+                            <input type="text" placeholder="Last Name" 
+                                   class="bg-white/10 border border-white/30 rounded-2xl px-6 py-4 focus:outline-none focus:border-blue-400 placeholder:text-gray-400">
+                        </div>
+                        <input type="email" placeholder="Business Email" 
+                               class="w-full bg-white/10 border border-white/30 rounded-2xl px-6 py-4 focus:outline-none focus:border-blue-400 placeholder:text-gray-400">
+                        <input type="text" placeholder="Company / Organization" 
+                               class="w-full bg-white/10 border border-white/30 rounded-2xl px-6 py-4 focus:outline-none focus:border-blue-400 placeholder:text-gray-400">
+                        <textarea placeholder="Tell us about your project..." rows="5"
+                                  class="w-full bg-white/10 border border-white/30 rounded-3xl px-6 py-4 focus:outline-none focus:border-blue-400 placeholder:text-gray-400"></textarea>
+                        
+                        <button type="submit"
+                                class="w-full bg-white text-blue-950 font-semibold py-5 rounded-2xl hover:bg-blue-100 transition-all">
+                            SEND MESSAGE
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400">
+        <div class="max-w-7xl mx-auto px-6 pt-20 pb-12">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div>
+                    <div class="flex items-center gap-3 text-white mb-6">
+                        <div class="w-9 h-9 bg-blue-600 rounded-2xl flex items-center justify-center font-bold">HS</div>
+                        <span class="text-2xl font-bold tracking-tight">Hermano Synergy</span>
+                    </div>
+                    <p class="text-sm">Integrated solutions for a stronger Bangladesh.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Our Services</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Ongoing Projects</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Tenders</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Services</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li>Civil Infrastructure</li>
+                        <li>Institutional Construction</li>
+                        <li>Nutritional Supply Chain</li>
+                        <li>Defense Logistics</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Get In Touch</h4>
+                    <p class="text-sm leading-relaxed">
+                        Rampura, Banasree<br>
+                        Dhaka, Bangladesh
+                    </p>
+                    <div class="mt-8 flex gap-5 text-2xl">
+                        <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-20 pt-8 text-xs flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>© 2026 Hermano Synergy. All Rights Reserved.</p>
+                <p class="text-center md:text-right">Proudly Made in Bangladesh</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script already loaded via CDN
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Simple form submission alert
+        const form = document.getElementById('contactForm');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert("Thank you! Your message has been received. We'll get back to you shortly.");
+                form.reset();
+            });
+        }
+        
+        // Mobile menu (basic alert for now)
+        console.log('%cHermano Synergy Website Loaded Successfully', 'color: #3b82f6; font-weight: bold;');
+    </script>
+</body>
+</html>
