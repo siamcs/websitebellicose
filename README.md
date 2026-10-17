@@ -1,8 +1,8 @@
-# Consent Merchant — Official Website
+# Hermano Synergy Ltd — Official Website
 
 🌐 **Live Website**: [https://siamcs.github.io/websitebellicose/](https://siamcs.github.io/websitebellicose/)
 
-Modern, high-performance institutional procurement and global trading platform website for **Consent Merchant Ltd.**
+Modern, high-performance institutional procurement and global trading platform website for **Hermano Synergy Ltd.**
 
 ## Key Features
 - **Modern UI & Aesthetic**: Dynamic interactive Three.js 3D globe, glassmorphic design, and dark/light mode toggle.
