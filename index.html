@@ -1790,6 +1790,163 @@ footer a:hover{color:var(--c-gold-300)}
   .timeline{padding-left:24px}
   .tl-dot{left:-30px}
 }
+
+/* ===== EXECUTIVE LEADERSHIP SECTION ===== */
+.leadership-section{background:var(--bg-2);padding:90px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+[data-theme="dark"] .leadership-section{background:rgba(12,28,48,.6)}
+.leadership-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:26px;
+  margin-top:40px;
+}
+.leader-card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--r-lg);
+  padding:28px 24px;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  transition:all .28s cubic-bezier(.16,1,.3,1);
+  box-shadow:0 4px 18px rgba(0,0,0,.03);
+}
+[data-theme="dark"] .leader-card{
+  background:var(--surface-2);
+  box-shadow:0 8px 30px rgba(0,0,0,.25);
+}
+.leader-card:hover{
+  transform:translateY(-6px);
+  border-color:var(--brand-gold);
+  box-shadow:0 16px 36px rgba(192,133,48,.14);
+}
+.leader-card-top{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-bottom:18px;
+}
+.leader-avatar{
+  width:64px;
+  height:64px;
+  border-radius:16px;
+  display:grid;
+  place-items:center;
+  font:800 20px 'Manrope',sans-serif;
+  color:#fff;
+  flex-shrink:0;
+  box-shadow:0 6px 16px rgba(0,0,0,.15);
+  position:relative;
+}
+.leader-avatar::after{
+  content:'';
+  position:absolute;
+  inset:-3px;
+  border-radius:19px;
+  border:2px solid rgba(192,133,48,.4);
+  pointer-events:none;
+}
+.leader-meta{flex:1;min-width:0}
+.leader-role-badge{
+  display:inline-block;
+  padding:3px 9px;
+  border-radius:999px;
+  background:rgba(192,133,48,.12);
+  color:var(--brand-gold);
+  border:1px solid rgba(192,133,48,.25);
+  font:700 11px 'Manrope',sans-serif;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+.leader-name{
+  font:800 17px/1.25 'Manrope',sans-serif;
+  color:var(--text);
+  margin:0 0 3px;
+}
+.leader-title{
+  font:600 12.5px 'Manrope',sans-serif;
+  color:var(--muted);
+  margin:0;
+}
+.leader-desc{
+  font-size:13.5px;
+  line-height:1.65;
+  color:var(--text-2);
+  margin:0 0 18px;
+  flex:1;
+}
+.leader-highlights{
+  list-style:none;
+  padding:0;
+  margin:0 0 20px;
+  border-top:1px solid var(--border);
+  padding-top:14px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.leader-highlights li{
+  font-size:12px;
+  color:var(--text-2);
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+}
+.leader-highlights li::before{
+  content:'✦';
+  color:var(--brand-gold);
+  font-size:11px;
+  margin-top:1px;
+  flex-shrink:0;
+}
+.leader-btn{
+  width:100%;
+  padding:10px 16px;
+  border-radius:var(--r-md);
+  border:1px solid var(--border-2);
+  background:var(--bg);
+  color:var(--text);
+  font:700 13px 'Manrope',sans-serif;
+  cursor:pointer;
+  transition:all .18s;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+}
+.leader-btn:hover{
+  background:linear-gradient(135deg,var(--c-navy-700),var(--c-navy-900));
+  color:#fff;
+  border-color:var(--brand-gold);
+}
+/* Modal Tabs */
+.leader-modal-tabs{
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  padding-bottom:12px;
+  margin-bottom:20px;
+  border-bottom:1px solid var(--border);
+}
+.leader-tab-btn{
+  padding:8px 14px;
+  border-radius:var(--r-md);
+  border:1px solid var(--border);
+  background:var(--bg-2);
+  color:var(--text-2);
+  font:700 12.5px 'Manrope',sans-serif;
+  cursor:pointer;
+  white-space:nowrap;
+  transition:all .15s;
+}
+.leader-tab-btn.on{
+  background:var(--brand-gold);
+  color:#0c1e35;
+  border-color:var(--brand-gold);
+  box-shadow:0 4px 12px rgba(192,133,48,.25);
+}
+
 </style>
 </head>
 <body>
@@ -1819,10 +1976,11 @@ footer a:hover{color:var(--c-gold-300)}
     </a>
 
     <nav id="main-nav" aria-label="Main navigation">
-      <a href="#capabilities">What We Do</a>
-      <a href="#track-record">What We've Done</a>
-      <a href="#future-plan">What We'll Work On</a>
-      <a href="#about">Company Profile</a>
+      <a href="#about">Corporate Profile</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#track-record">Track Record</a>
+      <a href="#future-plan">Future Scope</a>
       <a href="#landed-cost">Duty Estimator</a>
       <a href="#industries">Industries</a>
       <a href="#partners">Partners</a>
@@ -1981,9 +2139,9 @@ footer a:hover{color:var(--c-gold-300)}
   <div class="wrap">
     <div class="section-head">
       <div class="section-meta">
-        <span class="kicker">Current Scope &amp; Capabilities</span>
-        <h2 class="section-h">What We Do — Products &amp; Services</h2>
-        <p class="lead">Six core areas of institutional supply, general procurement, engineering equipment and contracting services.</p>
+        <span class="kicker">Core Capabilities</span>
+        <h2 class="section-h">Procurement &amp; Supply Solutions</h2>
+        <p class="lead">Six specialized domains of institutional procurement, general supply, engineering machinery, and contracting services.</p>
       </div>
     </div>
 
@@ -2110,8 +2268,8 @@ footer a:hover{color:var(--c-gold-300)}
     <div class="section-head">
       <div class="section-meta">
         <div class="future-badge">✦ Strategic Horizon 2027 – 2030</div>
-        <h2 class="section-h">What We Will Work On — Future Pipeline &amp; Vision 2030</h2>
-        <p class="lead">Next-generation institutional trade expansion: AI tender matching, smart port telemetry, green procurement ESG framework, and Matarbari deep sea bonded logistics.</p>
+        <h2 class="section-h">Strategic Growth Pipeline &amp; Future Scope</h2>
+        <p class="lead">Pioneering next-generation institutional procurement: automated tender intelligence, smart port telemetry, green ESG compliance, and deep-sea bonded logistics.</p>
       </div>
     </div>
 
@@ -2304,16 +2462,16 @@ footer a:hover{color:var(--c-gold-300)}
   <div class="wrap">
     <div class="split-grid">
       <div class="reveal">
-        <span class="kicker">Company Profile &amp; Overview</span>
-        <h2 class="section-h">Hermano Synergy Ltd — Institutional Partner</h2>
-        <p class="lead" style="color:var(--text)">Hermano Synergy Ltd is a Bangladesh-based general supplier, importer and contractor serving a broad range of government, institutional and commercial procurement requirements.</p>
-        <p style="margin-top:16px;color:var(--text-2);font-size:15px;line-height:1.7">We aim to build long-term institutional relationships through responsive communication, appropriate global supplier selection, clear documentation and prompt fulfilment of agreed contractual requirements.</p>
+        <span class="kicker">Corporate Profile</span>
+        <h2 class="section-h">Institutional Supply &amp; Contracting Excellence</h2>
+        <p class="lead" style="color:var(--text)">Hermano Synergy Ltd is a premier Bangladesh-based general supplier, importer, and contractor delivering mission-critical procurement solutions for government authorities, development agencies, and commercial enterprises.</p>
+        <p style="margin-top:16px;color:var(--text-2);font-size:15px;line-height:1.7">We establish long-term institutional partnerships through responsive communication, verified OEM manufacturer selection, rigorous compliance with Public Procurement Rules (PPR-2008), and reliable turnkey logistics.</p>
         <div style="margin-top:28px"><a class="btn btn-navy" href="#enquiry">Discuss a Requirement →</a></div>
       </div>
       <div class="reveal">
         <div class="quality-panel">
-          <span class="kicker">Company Details</span>
-          <h3 style="font-size:20px;margin:0 0 20px">Company Profile &amp; Governance</h3>
+          <span class="kicker">Enterprise Overview</span>
+          <h3 style="font-size:20px;margin:0 0 20px">Corporate Profile &amp; Governance</h3>
           <ul class="quality-list">
             <li><div class="ql-icon"></div><strong>Company:</strong> Hermano Synergy Ltd</li>
             <li><div class="ql-icon"></div><strong>Business Nature:</strong> General Supplier, Importer &amp; Contractor</li>
@@ -2323,6 +2481,105 @@ footer a:hover{color:var(--c-gold-300)}
           </ul>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXECUTIVE LEADERSHIP & MANAGEMENT ===== -->
+<section id="leadership" class="leadership-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-meta">
+        <span class="kicker">Executive Leadership &amp; Governance</span>
+        <h2 class="section-h">Board of Directors &amp; Executive Management</h2>
+        <p class="lead">Guided by experienced industry commanders, chartered engineers, and supply chain specialists committed to transparency, compliance, and institutional execution.</p>
+      </div>
+    </div>
+
+    <div class="leadership-grid">
+      <!-- Leader 1: Chairman -->
+      <article class="leader-card reveal">
+        <div class="leader-card-top">
+          <div class="leader-avatar" style="background:linear-gradient(135deg,#8b1e22,#b71c1c)">HR</div>
+          <div class="leader-meta">
+            <span class="leader-role-badge">Chairman of the Board</span>
+            <h3 class="leader-name">Maj. Gen. Kazi M. Harun-ur-Rashid (Retd.)</h3>
+            <p class="leader-title">ndc, psc · Board Governance</p>
+          </div>
+        </div>
+        <p class="leader-desc">Over 32 years of senior administrative and strategic procurement leadership. Presides over corporate governance, regulatory alignment, and sovereign megaproject execution.</p>
+        <ul class="leader-highlights">
+          <li><strong>Mandate:</strong> Board Governance &amp; Strategic Oversight</li>
+          <li><strong>Compliance:</strong> PPR-2008 &amp; Sovereign Tender Ethics</li>
+          <li><strong>Credentials:</strong> Master of Strategic Studies (ndc, psc)</li>
+        </ul>
+        <button class="leader-btn" onclick="leadershipMgr.open('chairman')">
+          View Complete Profile &amp; Bio →
+        </button>
+      </article>
+
+      <!-- Leader 2: MD -->
+      <article class="leader-card reveal">
+        <div class="leader-card-top">
+          <div class="leader-avatar" style="background:linear-gradient(135deg,#0a2540,#1e4a7a)">SC</div>
+          <div class="leader-meta">
+            <span class="leader-role-badge">Managing Director (MD)</span>
+            <h3 class="leader-name">Engr. Siam Chowdhury</h3>
+            <p class="leader-title">P.Eng. · Chief Executive Officer</p>
+          </div>
+        </div>
+        <p class="leader-desc">Directs international OEM treaties, high-value institutional tenders, and turnkey engineering supplies. Formulates the company's Vision 2030 and digital trade roadmap.</p>
+        <ul class="leader-highlights">
+          <li><strong>Mandate:</strong> Corporate Strategy &amp; Global OEM Treaties</li>
+          <li><strong>Sectors:</strong> Power, Agriculture &amp; Turnkey Tenders</li>
+          <li><strong>Credentials:</strong> B.Sc. Engineering (IEB) · Executive MBA</li>
+        </ul>
+        <button class="leader-btn" onclick="leadershipMgr.open('md')">
+          View Complete Profile &amp; Bio →
+        </button>
+      </article>
+
+      <!-- Leader 3: GM -->
+      <article class="leader-card reveal">
+        <div class="leader-card-top">
+          <div class="leader-avatar" style="background:linear-gradient(135deg,#0f7a74,#084d49)">TR</div>
+          <div class="leader-meta">
+            <span class="leader-role-badge">General Manager (GM)</span>
+            <h3 class="leader-name">Lt. Col. Tariq Rahman (Retd.)</h3>
+            <p class="leader-title">Operations &amp; Supply Chain Directorate</p>
+          </div>
+        </div>
+        <p class="leader-desc">24+ years directing port operations, customs velocity at Chittagong and Mongla ports, multi-modal transport fleets, and nationwide institutional site handovers.</p>
+        <ul class="leader-highlights">
+          <li><strong>Mandate:</strong> Seaport Logistics &amp; Customs Clearance</li>
+          <li><strong>Network:</strong> Chittagong, Mongla &amp; Dhaka Air Freight</li>
+          <li><strong>Credentials:</strong> M.S. Logistics · CSCP Certified</li>
+        </ul>
+        <button class="leader-btn" onclick="leadershipMgr.open('gm')">
+          View Complete Profile &amp; Bio →
+        </button>
+      </article>
+
+      <!-- Leader 4: Director Finance & Tenders -->
+      <article class="leader-card reveal">
+        <div class="leader-card-top">
+          <div class="leader-avatar" style="background:linear-gradient(135deg,#1565c0,#0d47a1)">FH</div>
+          <div class="leader-meta">
+            <span class="leader-role-badge">Director — Finance &amp; Tenders</span>
+            <h3 class="leader-name">Farzana Haque, FCMA</h3>
+            <p class="leader-title">Tender Management &amp; Financial Risk</p>
+          </div>
+        </div>
+        <p class="leader-desc">Leads financial bid architecture, multi-currency Letters of Credit (L/C), e-GP portal tender dossier reviews, and international foreign exchange risk management.</p>
+        <ul class="leader-highlights">
+          <li><strong>Mandate:</strong> L/C Instruments &amp; Banking Guarantees</li>
+          <li><strong>Expertise:</strong> CPTU e-GP Tender Formulation</li>
+          <li><strong>Credentials:</strong> FCMA Fellow · M.Com Finance (DU)</li>
+        </ul>
+        <button class="leader-btn" onclick="leadershipMgr.open('director')">
+          View Complete Profile &amp; Bio →
+        </button>
+      </article>
     </div>
   </div>
 </section>
@@ -2547,8 +2804,8 @@ footer a:hover{color:var(--c-gold-300)}
     <div class="section-head">
       <div class="section-meta">
         <span class="kicker">Proven Track Record</span>
-        <h2 class="section-h">What We Have Done — Completed Works &amp; Milestones</h2>
-        <p class="lead">Documented track record of government tenders, major institutional equipment consignments, and emergency supplies successfully delivered across Bangladesh.</p>
+        <h2 class="section-h">Completed Works &amp; Institutional Milestones</h2>
+        <p class="lead">Documented history of major government tenders, emergency relief consignments, and institutional supplies executed across Bangladesh.</p>
       </div>
     </div>
     <div class="timeline reveal">
@@ -2727,9 +2984,9 @@ footer a:hover{color:var(--c-gold-300)}
       </div>
       <div>
         <div class="footer-h">Company</div>
-        <a href="#about">Company Profile</a>
-        <a href="#track-record">What We've Done</a>
-        <a href="#future-plan">Future Plan 2030</a>
+        <a href="#about">Corporate Profile</a>
+        <a href="#track-record">Track Record</a>
+        <a href="#future-plan">Strategic Horizon</a>
         <a href="#quality">Quality &amp; Compliance</a>
         <a href="#partners">International Partnerships</a>
         <a href="#enquiry">Submit an Enquiry</a>
@@ -2754,6 +3011,39 @@ footer a:hover{color:var(--c-gold-300)}
 
 <!-- Back to Top -->
 <button id="backTop" aria-label="Back to top">↑</button>
+
+
+<!-- Leadership Profile Dossier Modal -->
+<div class="overlay" id="leaderOverlay" role="dialog" aria-modal="true">
+  <div class="modal modal-lg">
+    <div class="modal-hdr">
+      <h3 class="modal-title">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Executive Leadership Dossier — Hermano Synergy Ltd
+      </h3>
+      <button class="modal-close" onclick="leadershipMgr.close()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="leader-modal-tabs">
+        <button class="leader-tab-btn on" id="ltChairman" onclick="leadershipMgr.render('chairman')">👑 Chairman</button>
+        <button class="leader-tab-btn" id="ltMd" onclick="leadershipMgr.render('md')">🎯 Managing Director (MD)</button>
+        <button class="leader-tab-btn" id="ltGm" onclick="leadershipMgr.render('gm')">⚙️ General Manager (GM)</button>
+        <button class="leader-tab-btn" id="ltDirector" onclick="leadershipMgr.render('director')">💼 Director of Tenders &amp; Finance</button>
+      </div>
+
+      <div id="leaderModalContent">
+        <!-- Rendered dynamically by JS -->
+      </div>
+    </div>
+    <div class="modal-footer" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+      <span style="font-size:12px;color:var(--muted)">Official Executive Directory · Hermano Synergy Ltd</span>
+      <div style="display:flex;gap:10px">
+        <a class="btn btn-outline" href="#enquiry" onclick="leadershipMgr.close()">Direct Institutional Enquiry →</a>
+        <button class="btn btn-navy" onclick="leadershipMgr.close()">Close Dossier</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- ===== SPEED DIAL ===== -->
 <div class="speed-dial" id="speedDial">
@@ -3076,6 +3366,152 @@ footer a:hover{color:var(--c-gold-300)}
 // =========================================================
 // HERMANO SYNERGY LTD — PREMIUM SITE LOGIC
 // =========================================================
+
+
+// ----- EXECUTIVE LEADERSHIP MANAGER -----
+var LEADERSHIP_DATA = {
+  chairman: {
+    name: 'Maj. Gen. Kazi M. Harun-ur-Rashid (Retd.)',
+    role: 'Chairman of the Board',
+    credentials: 'ndc, psc · Board Governance & Institutional Strategy',
+    avatar: 'HR',
+    color: 'linear-gradient(135deg,#8b1e22,#b71c1c)',
+    summary: 'Major General Kazi M. Harun-ur-Rashid brings over 32 years of distinguished military, administrative, and strategic governance experience. As Chairman of Hermano Synergy Ltd, he presides over the company’s corporate integrity, sovereign procurement compliance, and long-term institutional alignment with national development frameworks.',
+    mandate: [
+      'Strategic corporate governance, policy integrity, and Board fiduciary oversight',
+      'High-level alignment with sovereign public procurement frameworks (PPR-2008)',
+      'Fostering government and diplomatic bilateral relationships for global supply treaties',
+      'Overseeing the company’s enterprise risk, audit, and ethical compliance committees'
+    ],
+    qualifications: [
+      'Master of Strategic Studies (MSS), National Defence College (ndc)',
+      'Graduate, Defence Services Command and Staff College (psc)',
+      'Master of Defence Studies (MDS), National University',
+      'Distinguished career in military administration and international defense logistics'
+    ],
+    quote: 'Institutional integrity and unwavering quality constitute the foundation of Hermano Synergy Ltd. We take pride in serving Bangladesh\'s infrastructure and commercial procurement with complete transparency and execution excellence.'
+  },
+  md: {
+    name: 'Engr. Siam Chowdhury',
+    role: 'Managing Director (MD) & Chief Executive',
+    credentials: 'P.Eng. · Executive Leadership & Global Partnerships',
+    avatar: 'SC',
+    color: 'linear-gradient(135deg,#0a2540,#1e4a7a)',
+    summary: 'Engr. Siam Chowdhury is a seasoned international trade strategist and professional engineer leading Hermano Synergy’s commercial operations, turnkey government tender contracts, and global OEM partnerships. He spearheads the company’s 2030 strategic expansion into digital port telemetry and smart supply chains.',
+    mandate: [
+      'Directing overall corporate executive strategy, day-to-day operations, and fiscal growth',
+      'Negotiating authorized distributorships and OEM partnerships across Europe, USA, and Asia',
+      'Leading complex e-GP tender bidding for BADC, BREB, DPHE, and civil authorities',
+      'Architecting the company’s Vision 2030 roadmap and automated procurement initiatives'
+    ],
+    qualifications: [
+      'Bachelor of Science in Mechanical/Industrial Engineering (IEB Member)',
+      'Executive Master of Business Administration (EMBA) in Global Supply Chain Management',
+      'Certified Procurement Specialist — Public Procurement Rules (PPR-2008 & CPTU)',
+      '12+ years of international trading, EPC procurement, and supply chain management'
+    ],
+    quote: 'Our commitment is simple: bridging world-class OEM engineering directly into Bangladesh\'s operational bloodstream with zero compromise on specification or delivery velocity.'
+  },
+  gm: {
+    name: 'Lt. Col. Tariq Rahman (Retd.)',
+    role: 'General Manager (GM) — Operations & Supply Chain',
+    credentials: 'CSCP · Seaport Execution & Logistics Directorate',
+    avatar: 'TR',
+    color: 'linear-gradient(135deg,#0f7a74,#084d49)',
+    summary: 'Lt. Col. Tariq Rahman oversees Hermano Synergy’s nationwide supply operations, Chittagong and Mongla seaport logistics, bonded warehousing, and technical pre-shipment inspections. His precision logistics command guarantees industry-leading port clearance velocity.',
+    mandate: [
+      'Turnkey management of ocean and air freight consignments through Chittagong and Dhaka',
+      'Liaison with Chittagong Custom House, port authorities, and regulatory inspection agencies',
+      'Overseeing pre-shipment inspection (PSI) coordination with SGS, Bureau Veritas, and TÜV',
+      'Nationwide inland fleet deployment, depot security, and client site handover protocols'
+    ],
+    qualifications: [
+      'Master of Science in Transportation & Supply Chain Logistics',
+      'Certified Supply Chain Professional (CSCP)',
+      'Senior Logistics Director, Bangladesh Armed Forces (Retd.) with 24+ years experience',
+      'Expertise in C&F operations, customs tariff classification, and bonded logistics'
+    ],
+    quote: 'Precision, velocity, and strict compliance are our hallmarks. From ship berthing to deep-inland project commissioning, our operations cadre ensures on-time, zero-defect delivery.'
+  },
+  director: {
+    name: 'Farzana Haque, FCMA',
+    role: 'Director — Finance & Institutional Tenders',
+    credentials: 'FCMA · Tender Engineering & Financial Governance',
+    avatar: 'FH',
+    color: 'linear-gradient(135deg,#1565c0,#0d47a1)',
+    summary: 'Farzana Haque directs the financial architecture, banking credit lines, foreign currency Letters of Credit (L/C), and compliance documentation for all multi-million dollar institutional procurements at Hermano Synergy Ltd.',
+    mandate: [
+      'Structuring tender securities, performance bonds, and international banking credit lines',
+      'Foreign currency Letters of Credit (L/C) opening and negotiation with top-tier schedule banks',
+      'Rigorous financial bid vetting under CPTU e-GP and multilateral donor guidelines',
+      'Financial risk modeling, foreign exchange hedging, and statutory fiscal compliance'
+    ],
+    qualifications: [
+      'Fellow of the Institute of Cost and Management Accountants of Bangladesh (FCMA)',
+      'Master of Commerce (M.Com) in Finance & Banking, University of Dhaka',
+      'Certified Public Procurement Specialist (CPTU / World Bank e-GP module)',
+      '18+ years corporate finance, trade financing, and institutional auditing'
+    ],
+    quote: 'Robust financial structuring and airtight banking instruments protect our clients and overseas manufacturers throughout the entire procurement lifecycle.'
+  }
+};
+
+var leadershipMgr = {
+  current: 'chairman',
+  open: function(key) {
+    this.current = key || 'chairman';
+    this.render(this.current);
+    document.getElementById('leaderOverlay').classList.add('open');
+  },
+  close: function() {
+    document.getElementById('leaderOverlay').classList.remove('open');
+  },
+  render: function(key) {
+    this.current = key;
+    ['chairman','md','gm','director'].forEach(function(k){
+      var btn = document.getElementById('lt' + k.charAt(0).toUpperCase() + k.slice(1));
+      if(btn) btn.classList.toggle('on', k === key);
+    });
+
+    var data = LEADERSHIP_DATA[key];
+    if(!data) return;
+
+    var container = document.getElementById('leaderModalContent');
+    if(!container) return;
+
+    container.innerHTML = 
+      '<div style="display:flex;align-items:flex-start;gap:20px;flex-wrap:wrap;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--border)">' +
+        '<div class="leader-avatar" style="width:78px;height:78px;font-size:26px;background:' + data.color + ';box-shadow:0 8px 24px rgba(0,0,0,.2)">' + data.avatar + '</div>' +
+        '<div style="flex:1;min-width:240px">' +
+          '<span class="leader-role-badge" style="font-size:12px">' + data.role + '</span>' +
+          '<h2 style="font:800 22px \'Manrope\',sans-serif;color:var(--text);margin:4px 0 6px">' + data.name + '</h2>' +
+          '<p style="font:600 13px \'Manrope\',sans-serif;color:var(--brand-gold);margin:0 0 10px">' + data.credentials + '</p>' +
+          '<p style="font-size:14px;line-height:1.7;color:var(--text-2);margin:0">' + data.summary + '</p>' +
+        '</div>' +
+      '</div>' +
+
+      '<div style="background:rgba(192,133,48,.07);border-left:4px solid var(--brand-gold);padding:14px 18px;border-radius:0 var(--r-md) var(--r-md) 0;margin-bottom:24px">' +
+        '<strong style="font-size:12px;text-transform:uppercase;color:var(--brand-gold);letter-spacing:.05em;display:block;margin-bottom:4px">Executive Statement</strong>' +
+        '<p style="font-size:13.5px;font-style:italic;color:var(--text);line-height:1.65;margin:0">“' + data.quote + '”</p>' +
+      '</div>' +
+
+      '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">' +
+        '<div style="background:var(--bg-2);padding:18px;border-radius:var(--r-md);border:1px solid var(--border)">' +
+          '<h4 style="font:700 14px \'Manrope\',sans-serif;color:var(--text);margin:0 0 12px;display:flex;align-items:center;gap:7px">🎯 Core Mandate &amp; Governance</h4>' +
+          '<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px">' +
+            data.mandate.map(function(m){ return '<li style="font-size:12.5px;color:var(--text-2);line-height:1.55;display:flex;gap:8px"><span style="color:var(--brand-gold)">✓</span><span>' + m + '</span></li>'; }).join('') +
+          '</ul>' +
+        '</div>' +
+
+        '<div style="background:var(--bg-2);padding:18px;border-radius:var(--r-md);border:1px solid var(--border)">' +
+          '<h4 style="font:700 14px \'Manrope\',sans-serif;color:var(--text);margin:0 0 12px;display:flex;align-items:center;gap:7px">🎓 Academic &amp; Professional Credentials</h4>' +
+          '<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px">' +
+            data.qualifications.map(function(q){ return '<li style="font-size:12.5px;color:var(--text-2);line-height:1.55;display:flex;gap:8px"><span style="color:var(--brand-teal)">✦</span><span>' + q + '</span></li>'; }).join('') +
+          '</ul>' +
+        '</div>' +
+      '</div>';
+  }
+};
 
 // ----- 3D GLOBE -----
 (function(){
@@ -3547,6 +3983,7 @@ var CMD_INDEX=[
   {icon:'📦',title:'Food & Relief Supplies',desc:'Humanitarian and emergency supplies',tag:'Product',action:function(){document.getElementById('capabilities').scrollIntoView({behavior:'smooth'})}},
   {icon:'🛡️',title:'PPE & Safety Equipment',desc:'Protective clothing and footwear',tag:'Product',action:function(){document.getElementById('capabilities').scrollIntoView({behavior:'smooth'})}},
   {icon:'🚢',title:'Import & Procurement',desc:'End-to-end sourcing and logistics',tag:'Product',action:function(){document.getElementById('capabilities').scrollIntoView({behavior:'smooth'})}},
+  {icon:'👔',title:'Executive Leadership Team',desc:'Chairman, MD, GM & Executive Profiles',tag:'Company',action:function(){document.getElementById('leadership').scrollIntoView({behavior:'smooth'})}},
   {icon:'🧮',title:'Duty & Cost Estimator',desc:'Calculate Bangladesh customs duties',tag:'Tool',action:function(){document.getElementById('landed-cost').scrollIntoView({behavior:'smooth'})}},
   {icon:'📋',title:'Submit an Enquiry',desc:'Product or partnership enquiry form',tag:'Action',action:function(){document.getElementById('enquiry').scrollIntoView({behavior:'smooth'})}},
   {icon:'⚡',title:'Sign In / Demo Access',desc:'Authenticate with institutional role',tag:'Auth',action:function(){authMgr.openModal()}},
